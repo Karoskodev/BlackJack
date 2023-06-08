@@ -53,3 +53,16 @@ def compare_score(player_score, dealer_score):
         return "You win!"
     else:
         return "Dealer wins!"
+
+def main():
+    """
+    Function to run the game. 
+    """
+
+    print("Welcome to Blackjack!\n")
+
+    for _ in range(2):
+        dealing(player)
+        dealing(dealer)
+
+    
