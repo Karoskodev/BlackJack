@@ -34,3 +34,22 @@ def calculate_score(cards):
                 score += 11
     return score
 
+def compare_score(player_score, dealer_score):
+    """
+    Compare scores of the player and dealer and return result
+    """
+
+    if player_score == dealer_score:
+        return "It's a draw!"
+    elif player_score == 21:
+        return "You win with a Blackjack!"
+    elif dealer_score == 21:
+        return "Dealer wins with a Blackjack!"
+    elif player_score > 21:
+        return "You went over 21. You lose!"
+    elif dealer_score > 21:
+        return "Dealer went over 21. You win!"
+    elif player_score > dealer_score:
+        return "You win!"
+    else:
+        return "Dealer wins!"
