@@ -65,4 +65,15 @@ def main():
         dealing(player)
         dealing(dealer)
 
-    
+    game_over = False
+
+    while not game_over:
+        player_score = calculate_score(player)
+        dealer_score = calculate_score(dealer)
+
+        print(f"Your cards: {player}, score: {player_score}")
+        print(f"Dealer's first card: {dealer[0]}")
+
+        if player_score or dealer_score == 21 or player_score > 21:
+            game_over = True
+            
