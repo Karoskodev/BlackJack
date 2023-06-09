@@ -87,3 +87,8 @@ def main():
     while dealer_score < 17:
         dealing(dealer)
         dealer_score = calculate_score(dealer)
+        
+
+    print(f"Your final hand: {player}, final score: {player_score}")
+    print(f"Dealer's final hand: {dealer}, final score: {dealer_score}")
+    print(compare_score(player_score, dealer_score))
