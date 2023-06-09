@@ -76,4 +76,11 @@ def main():
 
         if player_score or dealer_score == 21 or player_score > 21:
             game_over = True
-            
+        else:
+            ask = input("Type 'y' to get another card, or 'n' to pass: ")
+
+            if ask.lower() == "y":
+                dealing(player)
+            else:
+                game_over = True
+
