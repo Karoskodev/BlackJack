@@ -74,7 +74,7 @@ def main():
         print(f"Your cards: {player}, score: {player_score}")
         print(f"Dealer's first card: {dealer[0]}")
 
-        if player_score or dealer_score == 21 or player_score > 21:
+        if player_score == 21 or dealer_score == 21 or player_score > 21:
             game_over = True
         else:
             ask = input("Type 'y' to get another card, or 'n' to pass: ")
@@ -83,4 +83,7 @@ def main():
                 dealing(player)
             else:
                 game_over = True
-
+    
+    while dealer_score < 17:
+        dealing(dealer)
+        dealer_score = calculate_score(dealer)
