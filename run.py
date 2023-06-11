@@ -59,7 +59,7 @@ def main():
     Function to run the game. 
     """
 
-    for _ in range(2):
+    for _ in range(2): 
         dealing(player)
         dealing(dealer)
 
@@ -69,8 +69,13 @@ def main():
         player_score = calculate_score(player)
         dealer_score = calculate_score(dealer)
 
-        print(f"\nYour cards: {player}, score: {player_score}")
-        print(f"\nDealer's first card: {dealer[0]}\n")
+        print(f"\nYour cards:") 
+        for x in player:
+            print(f"{x},", end=" ")
+        print(f"\nscore: {player_score}")
+
+        #print(f"\nYour cards: {player}, score: {player_score}")
+        print(f"\nDealer's first card: \n{dealer[0]}\n")
 
         if player_score == 21 or dealer_score == 21 or player_score > 21:
             game_over = True
@@ -87,8 +92,15 @@ def main():
         dealer_score = calculate_score(dealer)
 
 
-    print(f"Your final hand: {player}, final score: {player_score}")
-    print(f"Dealer's final hand: {dealer}, final score: {dealer_score}\n")
+    print(f"\nYour final hand:")
+    for x in player:
+            print(f"{x},", end=" ")
+    print(f"\nfinal score: {player_score}")
+    
+    print(f"\nDealer's final hand:")
+    for x in dealer:
+            print(f"{x},", end=" ")
+    print(f"\nfinal score: {dealer_score}\n")
     print(compare_score(player_score, dealer_score))
 
 print("Welcome to Blackjack!")
