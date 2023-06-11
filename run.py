@@ -80,12 +80,19 @@ def main():
         if player_score == 21 or dealer_score == 21 or player_score > 21:
             game_over = True
         else:
-            ask = input("Type 'y' to get another card, or 'n' to pass: ")
+            try:
+                ask = input("Type 'y' to get another card, or 'n' to pass: ")
 
-            if ask.lower() == "y":
-                dealing(player)
-            else:
-                game_over = True
+                if ask.lower() == "y":
+                   dealing(player)
+                elif ask.lower() == "n":
+                    game_over = True
+                else:
+                    raise ValueError
+                    (f"I am sorry but {ask} is not a valid selection")
+            except ValueError:
+                   print("Invalid input. Please enter 'y' or 'n'")
+                
     
     while dealer_score < 17:
         dealing(dealer)
@@ -105,7 +112,23 @@ def main():
 
 print("Welcome to Blackjack!")
 
-while input("\nDo you want to start a new game ? Type 'y' for yes or 'n' for no: ") == 'y':
-    player.clear()
-    dealer.clear()
-    main()
+
+while True:
+    try:
+        question = input("\nDo you want to start a new game ? Type 'y' for yes or 'n' for no: ")
+        if question.lower() == 'y':
+            if len(deck) < 26:
+                deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+                 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
+            player.clear()
+            dealer.clear()
+            main()
+        elif question.lower() == 'n':
+            break
+        else :
+            raise ValueError
+            (f"I am sorry but {question} is not a valid selection")
+
+    except ValueError:
+        print("I am sorry that input is invalid. Please enter 'y' or 'n'")
+            
