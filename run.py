@@ -59,8 +59,6 @@ def main():
     Function to run the game. 
     """
 
-    print("Welcome to Blackjack!\n")
-
     for _ in range(2):
         dealing(player)
         dealing(dealer)
@@ -93,7 +91,9 @@ def main():
     print(f"Dealer's final hand: {dealer}, final score: {dealer_score}")
     print(compare_score(player_score, dealer_score))
 
-while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y':
+print("Welcome to Blackjack!\n")
+
+while input("Do you want to start a new game ? Type 'y' for yes or 'n' for no: ") == 'y':
     player.clear()
     dealer.clear()
     main()
