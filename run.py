@@ -21,7 +21,7 @@ def calculate_score(cards):
     Takes a list of cards and returns the score calculated from the cards
     """
     score = 0
-    high = ["j", "Q", "K"]
+    high = ["J", "Q", "K"]
     for card in cards:
         if card in range(1, 11):
             score += card
