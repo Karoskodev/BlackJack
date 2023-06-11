@@ -1,13 +1,16 @@
 import random
 
-deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
-         2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
+deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+        2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+        2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+        2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
 
 player = []
 
 dealer = []
 
-def dealing (who):
+
+def dealing(who):
     """
     Deal a card to the player/dealer and remove that card from deck
     """
@@ -34,6 +37,7 @@ def calculate_score(cards):
                 score += 11
     return score
 
+
 def compare_score(player_score, dealer_score):
     """
     Compare scores of the player and dealer and return result
@@ -54,12 +58,13 @@ def compare_score(player_score, dealer_score):
     else:
         return "Dealer wins!"
 
+
 def main():
     """
-    Function to run the game. 
+    Function to run the game.
     """
 
-    for _ in range(2): 
+    for _ in range(2):
         dealing(player)
         dealing(dealer)
 
@@ -69,12 +74,11 @@ def main():
         player_score = calculate_score(player)
         dealer_score = calculate_score(dealer)
 
-        print(f"\nYour cards:") 
+        print(f"\nYour cards:")
         for x in player:
             print(f"{x},", end=" ")
         print(f"\nscore: {player_score}")
 
-        #print(f"\nYour cards: {player}, score: {player_score}")
         print(f"\nDealer's first card: \n{dealer[0]}\n")
 
         if player_score == 21 or dealer_score == 21 or player_score > 21:
@@ -84,51 +88,52 @@ def main():
                 ask = input("Type 'y' to get another card, or 'n' to pass: ")
 
                 if ask.lower() == "y":
-                   dealing(player)
+                    dealing(player)
                 elif ask.lower() == "n":
                     game_over = True
                 else:
                     raise ValueError
                     (f"I am sorry but {ask} is not a valid selection")
             except ValueError:
-                   print("Invalid input. Please enter 'y' or 'n'")
-                
-    
+                print("Invalid input. Please enter 'y' or 'n'")
+
     while dealer_score < 17:
         dealing(dealer)
         dealer_score = calculate_score(dealer)
 
-
     print(f"\nYour final hand:")
     for x in player:
-            print(f"{x},", end=" ")
+        print(f"{x},", end=" ")
     print(f"\nfinal score: {player_score}")
-    
+
     print(f"\nDealer's final hand:")
     for x in dealer:
-            print(f"{x},", end=" ")
+        print(f"{x},", end=" ")
     print(f"\nfinal score: {dealer_score}\n")
     print(compare_score(player_score, dealer_score))
+
 
 print("Welcome to Blackjack!")
 
 
 while True:
     try:
-        question = input("\nDo you want to start a new game ? Type 'y' for yes or 'n' for no: ")
+        question = input("\nDo you want to start a new game ?
+                         Type 'y' for yes or 'n' for no: ")
         if question.lower() == 'y':
             if len(deck) < 26:
-                deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
-                 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
+                deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+                        2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+                        2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
+                        2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
             player.clear()
             dealer.clear()
             main()
         elif question.lower() == 'n':
             break
-        else :
+        else:
             raise ValueError
             (f"I am sorry but {question} is not a valid selection")
 
     except ValueError:
         print("I am sorry that input is invalid. Please enter 'y' or 'n'")
-            
