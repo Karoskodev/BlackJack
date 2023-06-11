@@ -69,8 +69,8 @@ def main():
         player_score = calculate_score(player)
         dealer_score = calculate_score(dealer)
 
-        print(f"Your cards: {player}, score: {player_score}")
-        print(f"Dealer's first card: {dealer[0]}")
+        print(f"\nYour cards: {player}, score: {player_score}")
+        print(f"\nDealer's first card: {dealer[0]}\n")
 
         if player_score == 21 or dealer_score == 21 or player_score > 21:
             game_over = True
@@ -88,12 +88,12 @@ def main():
 
 
     print(f"Your final hand: {player}, final score: {player_score}")
-    print(f"Dealer's final hand: {dealer}, final score: {dealer_score}")
+    print(f"Dealer's final hand: {dealer}, final score: {dealer_score}\n")
     print(compare_score(player_score, dealer_score))
 
-print("Welcome to Blackjack!\n")
+print("Welcome to Blackjack!")
 
-while input("Do you want to start a new game ? Type 'y' for yes or 'n' for no: ") == 'y':
+while input("\nDo you want to start a new game ? Type 'y' for yes or 'n' for no: ") == 'y':
     player.clear()
     dealer.clear()
     main()
