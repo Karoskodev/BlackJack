@@ -118,8 +118,8 @@ print("Welcome to Blackjack!")
 
 while True:
     try:
-        question = input("\nDo you want to start a new game ?
-                         Type 'y' for yes or 'n' for no: ")
+        question = input("\nDo you want to start a new game?"
+                         "Type 'y' for yes or 'n' for no:")
         if question.lower() == 'y':
             if len(deck) < 26:
                 deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A",
