@@ -49,3 +49,56 @@ The 'player' and 'dealer' lists represent the hands of the player and the dealer
 - compare_score(player_score, dealer_score): Compares the scores of the player and dealer and returns the outcome of the game based on the scores.
 
 - main(): The main game loop that controls the flow of the game. It deals two initial cards to the player and dealer, calculates their scores, displays the hands and scores, prompts the player for their actions, and determines the outcome of the game.
+
+## Testing
+I have manually tested this project by doing the following:
+- Tested the code trough a PEP8 linter with no error
+- Tested in my local terminal and the Heroku terminal
+- Given invalid inputs
+- My family and friends tested the game
+
+### Validator Testing
+- PEP8
+
+![PEP8](images/test.png)
+
+### Start game 
+
+![Start](images/start.png)
+
+### End game
+
+![End](images/nogame.png)
+
+### Get another card? /Yes
+
+![Card](images/card.png)
+
+### Get another card? /No
+
+![Pass](images/pass.png)
+
+### Result:Draw
+
+![Draw](images/draw.png)
+
+### Result:Win
+
+![Win](images/win.png)
+
+### Result:Loss
+
+![Loss](images/loss.png)
+
+### Result:Win with Blackjack
+
+![Winbj](images/winBJ.png)
+
+### Result:Loss agaist Blackjack
+
+![Lossbj](images/dealerBJ.png)
+
+
+
+
+
