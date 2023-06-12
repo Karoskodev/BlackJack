@@ -32,3 +32,20 @@ This is a simple implementation of the popular card game Blackjack written in Py
 - Implement different difficulty levels or strategies for the dealer to provide a more challenging experience.
 - and track the player's winnings or losses.
 - Add multiplayer functionality to enable multiple players to compete against each other.
+
+## Data Model
+
+### Deck
+The 'deck' variable represents the deck of cards in the game. It is initially defined as a list of cards, which includes numbers 2-10, and face cards (J, Q, K, A). The deck is used for dealing cards to players and dealers.
+
+### Player and Dealer Hands
+The 'player' and 'dealer' lists represent the hands of the player and the dealer, respectively. They are initially empty and cards are added to these lists during the game.
+
+### Functions
+- dealing(who): Deals a card to the specified player or dealer by randomly selecting a card from the deck and removing it from the deck.
+
+- calculate_score(cards): Takes a list of cards and calculates the score based on the values of the cards. Numeric cards are worth their face value, face cards (J, Q, K) are worth 10, and Ace (A) can be worth either 1 or 11 depending on the current score.
+
+- compare_score(player_score, dealer_score): Compares the scores of the player and dealer and returns the outcome of the game based on the scores.
+
+- main(): The main game loop that controls the flow of the game. It deals two initial cards to the player and dealer, calculates their scores, displays the hands and scores, prompts the player for their actions, and determines the outcome of the game.
