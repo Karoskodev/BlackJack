@@ -4,6 +4,8 @@ This is a simple implementation of the popular card game Blackjack written in Py
 
 [Live version of my project](https://blackjack-p3.herokuapp.com/)
 
+![Responsive picture](images/respon.png)
+
 ## How to Play
 
 -The game starts by dealing two cards to the player and two cards to the dealer. The player's cards are visible, while only one of the dealer's cards is shown.
