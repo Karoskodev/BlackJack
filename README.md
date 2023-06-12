@@ -98,7 +98,25 @@ I have manually tested this project by doing the following:
 
 ![Lossbj](images/dealerBJ.png)
 
+### Bugs
 
+#### Solved Bug
+When i wrote the project it was showing draw result even when player score was above 21,fixed with more specific conditions
 
+#### Remaining Bugs
+No bugs remaining
 
+## Deployment
+This project was deployed using Code Institute's mock terminal for Heroku
+- Steps for deployment:
+    - Create a new Heroku app
+    - Set the buildbacks to Python and NodeJS in that order
+    - Link the Heroku app to the repository
+    - Click on Deploy
 
+## Credits 
+
+- Code Institute for the deployment terminal, templates...
+- Wikipediafor the details of the game
+- [W3schools.com](https://www.w3schools.com/css/default.asp) 
+- I use [Am I Responsive](https://ui.dev/amiresponsive) for responsive design picture
