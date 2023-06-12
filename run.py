@@ -32,6 +32,8 @@ def calculate_score(cards):
             score += card
         elif card in high:
             score += 10
+        elif cards.count("A") == 2 and len(cards) == 2:
+            score += 12
         else:
             if score > 11:
                 score += 1
