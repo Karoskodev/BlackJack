@@ -45,7 +45,7 @@ def compare_score(player_score, dealer_score):
     Compare scores of the player and dealer and return result
     """
 
-    if player_score == dealer_score:
+    if player_score == dealer_score and player_score < 22:
         return "It's a draw!"
     elif player_score == 21:
         return "You win with a Blackjack!"
@@ -107,7 +107,7 @@ def main():
                 print("Invalid input. Please enter 'y' or 'n'")
 
     # Dealer keeps getting cards until the score reaches 17 or above
-    while dealer_score < 17:
+    while dealer_score < 17 and player_score < 22:
         dealing(dealer)
         dealer_score = calculate_score(dealer)
 
