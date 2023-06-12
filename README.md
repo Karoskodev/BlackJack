@@ -8,9 +8,27 @@ This is a simple implementation of the popular card game Blackjack written in Py
 
 ## How to Play
 
--The game starts by dealing two cards to the player and two cards to the dealer. The player's cards are visible, while only one of the dealer's cards is shown.
--The player's goal is to get a higher score than the dealer without exceeding 21. The value of numbered cards is their face value, face cards (J, Q, K) are worth 10, and Aces can be worth either 1 or 11, whichever is more advantageous.
--The player can choose to either "hit" (receive another card) or "pass" (end their turn) by entering 'y' or 'n' when prompted.
--If the player's score exceeds 21, they bust and lose the game. If the player chooses to pass, it becomes the dealer's turn.
--The dealer will keep hitting until their score is 17 or higher.
--After both the player and dealer have finished their turns, the scores are compared, and the winner is determined.
+- The game starts by dealing two cards to the player and two cards to the dealer. The player's cards are visible, while only one of the dealer's cards is shown.
+- The player's goal is to get a higher score than the dealer without exceeding 21. The value of numbered cards is their face value, face cards (J, Q, K) are worth 10, and Aces can be worth either 1 or 11, whichever is more advantageous.
+- The player can choose to either "hit" (receive another card) or "pass" (end their turn) by entering 'y' or 'n' when prompted.
+- If the player's score exceeds 21, they bust and lose the game. If the player chooses to pass, it becomes the dealer's turn.
+- The dealer will keep hitting until their score is 17 or higher.
+- After both the player and dealer have finished their turns, the scores are compared, and the winner is determined.
+
+## Features
+
+- The game uses a standard deck of 52 playing cards.
+- The player can choose to hit or pass during their turn.
+- The dealer follows a simple rule: they keep hitting until their score is 17 or higher.
+- The game automatically shuffles the deck when less than 26 cards remain.
+- The game includes error handling for invalid user input.
+- The score is calculated based on the values assigned to each card.
+- The game determines the winner based on a set of predefined rules.
+- The player has the option to start a new game or exit after each round.
+
+## Future Features
+
+- Add more advanced gameplay features, such as splitting pairs and doubling down.
+- Implement different difficulty levels or strategies for the dealer to provide a more challenging experience.
+- and track the player's winnings or losses.
+- Add multiplayer functionality to enable multiple players to compete against each other.
