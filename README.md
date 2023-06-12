@@ -98,6 +98,10 @@ I have manually tested this project by doing the following:
 
 ![Lossbj](images/dealerBJ.png)
 
+### Wrong imput
+
+![Wrong](images/inpu.png)
+
 ### Bugs
 
 #### Solved Bug
